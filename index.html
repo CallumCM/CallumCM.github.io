@@ -14,11 +14,29 @@
         <h3 class='title'>Check out some of these games:</h3>
         <p class='title'>THIS WEBSITE IS UNDER CONSTRUCTION</p>
         <script>
-            function Setup() {
-                CreateCanvas(400,400);
-                background(100);
-            }
-            console.log("Startedup");
+
+let pg;
+
+function setup() {
+  createCanvas(710, 400);
+  pg = createGraphics(400, 250);
+}
+
+function draw() {
+  fill(0, 12);
+  rect(0, 0, width, height);
+  fill(255);
+  noStroke();
+  ellipse(mouseX, mouseY, 60, 60);
+
+  pg.background(51);
+  pg.noFill();
+  pg.stroke(255);
+  pg.ellipse(mouseX - 150, mouseY - 75, 60, 60);
+
+  //Draw the offscreen buffer to the screen with image()
+  image(pg, 150, 75);
+}
         </script>
     </body>
 </html>

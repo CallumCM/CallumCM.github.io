@@ -53,9 +53,10 @@ nav ul li:hover ul {
 }
 .dropdown {
     margin-right: 175px;
-    border:  solid #222;
-    border-radius: 10px;
+    border: 1px solid #222;
+    border-radius: 5px;
     background-color: #222;
+    
 }
 nav ul li ul li a{
     width: 180px;

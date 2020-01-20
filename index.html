@@ -13,10 +13,9 @@
         <h1 class="title">Welcome to GeekVeggie!</h1>
         <h3 class='title'>Check out some of these games:</h3>
         <p class='title'>THIS WEBSITE IS UNDER CONSTRUCTION</p>
+        <canvas id='draw' width='710 px' height='400 px'>You need to enable the HTML5 canvas</canvas>
         <script>
-
 let pg;
-
 function setup() {
     createCanvas(710, 400);
     background(100);
@@ -24,7 +23,6 @@ function setup() {
     strokeWeight(4);
     stroke(255, 204, 100);
 }
-
 function draw() {
     if(mouseIsPressed) {
        line(pmouseX, pmouseY, mouseX, mouseY);

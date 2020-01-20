@@ -3,35 +3,38 @@
         <title>GeekVeggie</title>
         <meta charset="utf-8">
         <script src="https://cdn.jsdelivr.net/npm/p5"></script>
-        <style>
-            canvas {
-                background-color: black;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1 class="title">Welcome to GeekVeggie!</h1>
-        <h3 class='title'>Check out some of these games:</h3>
-        <p class='title'>THIS WEBSITE IS UNDER CONSTRUCTION</p>
-        <canvas id='draw' width='710 px' height='400 px'>You need to enable the HTML5 canvas</canvas>
-        <script>
-let pg;
-function setup() {
-    createCanvas(710, 400);
-    background(100);
-    colorMode(HSB);
-    strokeWeight(4);
-    stroke(255, 204, 100);
-}
-function draw() {
-    if(mouseIsPressed) {
-       line(pmouseX, pmouseY, mouseX, mouseY);
-    }
-}
-        </script>
-        <p>Make a lame drawing!</p>
+        <p class='title' id='warning'>THIS WEBSITE IS UNDER CONSTRUCTION</p>
         <br />
-        <p>My latest game: Oodgel <br />Don't ask about the name</p>
-        <a href='./oodgel.htm'>Oodgel</a>
+        <nav>
+            <ul>
+                <li class="dropdown"><a href='#'>Games</a><ul><li><a href='oodgel.htm'>Oodgel</a></li><li><a>Lame Christmastree Clicker</a></li></ul></li>
+                <li class="dropdown"><a href='#'>How I Made Them</a></li>
+                <li class="dropdown"><a href='#'>P5JS experiments</a></li>
+            </ul>
+        </nav>
+        <br /><br /><br /><br /><br />
+        <h3 class="title">Make a lame drawing!</h3>
+        <div id="drawholder"></div>
+        <script>
+            let pg;
+            function setup() {
+                var canvas = createCanvas(710, 400);
+                canvas.parent('drawholder');
+                background(100);
+                colorMode(HSB);
+                strokeWeight(4);
+                stroke(255, 204, 100);
+            }
+            function draw() {
+                if(mouseIsPressed) {
+                line(pmouseX, pmouseY, mouseX, mouseY);
+                }
+            }
+        </script>
     </body>
 </html>

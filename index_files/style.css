@@ -46,10 +46,10 @@ nav ul li ul {
     display: none;
     position: absolute;
     background-color: rgba(0,0,0,0.4);
-    padding: 100px;
+    padding: 10px;
     border-radius: 4px;
-    top: -115%;
-    left: -45%;
+    top:74px;
+    left: -50%;
 }
 nav ul li:hover ul {
     display: block;

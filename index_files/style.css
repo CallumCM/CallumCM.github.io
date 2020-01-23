@@ -12,7 +12,7 @@ canvas {
     text-align: center;
 }
 html {
-    height: 150%;
+    height: 100%;
     width: 100%;
     background-image: linear-gradient(to top, #040404, #333);
     background-repeat: round;
@@ -78,7 +78,6 @@ nav ul li ul li a:hover {
     font-weight: 200;
 }
 #bottom {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -87,7 +86,7 @@ nav ul li ul li a:hover {
     border-radius: 4px;
 }
 button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     background-color: #4CAF50;
 }
 button {
@@ -101,4 +100,7 @@ button {
 .buttonContainer {
     text-align: center;
 }
-button:
+button:active {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #3C9F40;
+}

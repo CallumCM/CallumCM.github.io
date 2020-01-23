@@ -1,0 +1,29 @@
+<head>
+    <title>GeekVeggie | Dad Jokes</title>
+    <link href="index_files/css.css" rel="stylesheet">
+    <link href="index_files/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="buttonContainer">
+        <h2 class='title'>Random Dad Joke Generator:</h2>
+        <div id='joke' class='joke'>
+        
+        </div>
+        <button id='get_joke' onclick="generateJoke()">Get Another Joke</button>
+    </div>
+    <script>
+        const jokeEL = document.getElementById('joke');
+        const get_joke = document.getElementById('get_joke');
+
+        get_joke.addEventListener('click', generateJoke());
+        async function generateJoke() {
+            const jokeRes = await fetch('https://icanhazdadjoke.com/', {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            const joke = await jokeRes.json();
+            jokeEL.innerHTML = joke.joke;
+        }
+    </script>
+</body>

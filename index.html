@@ -21,19 +21,27 @@
         <br><br><br><br><br>
         <h3 class="title">Drawing Challenge Theme: made in China</h3>
         <div id="drawholder"></div>
-        <input name="Color Picker" type="color"/>
+        <p class="title">Brush Color: <input class="title" name="color" id='bcolor' type="color"/></p>
+        <div class="buttonContainer">
+            <button class="title" onclick="cleardraw()">Clear</button>
+        </div>
         <script>
             function setup() {
                 var canvas = createCanvas(710, 400);
                 canvas.parent('drawholder');
                 background(100);
                 strokeWeight(4);
-                stroke(color('#f92804'));
+                stroke(color(document.getElementById("bcolor").value.toString()));
             }
             function draw() {
                 if(mouseIsPressed) {
                 line(pmouseX, pmouseY, mouseX, mouseY);
                 }
+                stroke(color(document.getElementById("bcolor").value.toString()));
+            }
+            function cleardraw() {
+                clear();
+                background(100);
             }
         </script>
         <p id='bottom' class="title">My favorite pastime is watching <a href="https://www.youtube.com/channel/UCwn_K-bj6kSR_efWHTmzKsg">The Untamed Moose</a> on YouTube, maybe you should check it out</p>

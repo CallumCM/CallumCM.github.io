@@ -21,15 +21,14 @@
         <br><br><br><br><br>
         <h3 class="title">Drawing Challenge Theme: made in China</h3>
         <div id="drawholder"></div>
+        <input name="Color Picker" type="color"/>
         <script>
-            let pg;
             function setup() {
                 var canvas = createCanvas(710, 400);
                 canvas.parent('drawholder');
                 background(100);
-                colorMode(HSB);
                 strokeWeight(4);
-                stroke(255, 204, 100);
+                stroke(color('#f92804'));
             }
             function draw() {
                 if(mouseIsPressed) {

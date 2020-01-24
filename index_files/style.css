@@ -49,14 +49,14 @@ nav ul li ul {
     background-color: rgba(0,0,0,0.4);
     padding: 10px;
     border-radius: 4px;
-    top:74px;
-    left: -50%;
+    top:3.7em;
+    right: -2em;
 }
 nav ul li:hover ul {
     display: block;
 }
 .dropdown {
-    top: -15px;
+    top: -1em;
     display: block;
     right: auto;
     border-radius: 5px;
@@ -103,4 +103,12 @@ button {
 button:active {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     background-color: #3C9F40;
+}
+.jokeContainer {
+    text-align: center;
+    background-color: #141414;
+    border-radius: 5px;
+    margin:25%;
+    padding: 3em;
+    box-shadow: 1px 2px 4px #020202;
 }

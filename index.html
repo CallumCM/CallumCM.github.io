@@ -8,6 +8,7 @@
         <link href="index_files/style.css" rel="stylesheet">
     </head>
     <body>
+        <noscript>Your browser doesn't support JavaScript or it isn't enabled, all of the programs here use JavaScript to run.</noscript>
         <h1 class="title">Welcome to GeekVeggie!</h1>
         <p class="title" id="warning">THIS WEBSITE IS UNDER CONSTRUCTION</p>
         <br />
@@ -25,24 +26,7 @@
         <div class="buttonContainer">
             <button class="title" onclick="cleardraw()">Clear</button>
         </div>
-        <script>
-            function setup() {
-                var canvas = createCanvas(710, 400);
-                canvas.parent('drawholder');
-                background(100);
-                strokeWeight(4);
-                stroke(color(document.getElementById("bcolor").value.toString()));
-            }
-            function draw() {
-                if(mouseIsPressed) {
-                line(pmouseX, pmouseY, mouseX, mouseY);
-                }
-                stroke(color(document.getElementById("bcolor").value.toString()));
-            }
-            function cleardraw() {
-                background(100);
-            }
-        </script>
+        <script src="./dailydraw.js"></script>
         <p id='bottom' class="title">My favorite pastime is watching <a href="https://www.youtube.com/channel/UCwn_K-bj6kSR_efWHTmzKsg">The Untamed Moose</a> on YouTube, maybe you should check it out</p>
     </body>
 </html>

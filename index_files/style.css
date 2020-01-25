@@ -1,3 +1,8 @@
+@keyframes dropdown {
+    0%   { margin-top: 0em; }
+    50%  { margin-top: 0.9em; }
+    100% { margin-top: 0em;}
+}
 .list {
     margin: 0;
     padding: 0;
@@ -14,9 +19,11 @@
     background-color: #141414;
     border-bottom: 2px solid #000;
     position: relative;
+    z-index: 1;
 }
 .list li:hover ul li {
     display: block;
+    animation: dropdown 0.6s ;
 }
 .list li ul{
     position: absolute;

@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Tectonic Plates</title>
+    <title>GeekVeggie | Tectonic Plates</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="stylesheet" href="../../index_files/css.css">
     <link rel="stylesheet" href="../../index_files/style.css">
-
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
@@ -25,5 +24,18 @@
         <div class="title">Tectonic Plates</div>
       </div>
     </div>
+    <script>
+      setInterval(function() {
+        if (typeof TOTAL_MEMORY !== 'undefined') {
+          try {
+            var totalMem = TOTAL_MEMORY/1024.0/1024.0;
+            var usedMem = (TOTAL_STACK + (STATICTOP - STATIC_BASE) +
+                          (DYNAMICTOP - DYNAMIC_BASE))/1024.0/1024.0;
+            console.log('Memory stats - used: ' + Math.ceil(usedMem) + 'M' +
+                        ' free: ' + Math.floor(totalMem - usedMem) + 'M');
+          } catch(e) {}
+        }
+      }, 5000);
+    </script>
   </body>
 </html>

@@ -48,12 +48,10 @@ canvas {
 }
 body {
     background-image: linear-gradient(to top, #040404, #333);
-    width : 100%;
-    height: 100vh;
-    object-fit: contain;
-    background-repeat:no-repeat;
-    background-position:center;
+    width: 100%;
+    height: auto;
 }
+
 #warning {
     color: red;
     font-weight: 200;
@@ -83,6 +81,7 @@ button:hover {
 button {
     transition-duration: 0.4s;
     background-color: rgba(0,0,0,0);
+    padding: 10px 30px;
     border: 2px solid #4CAF50;
     border-radius: 3px;
     width: auto;

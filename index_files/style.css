@@ -47,9 +47,13 @@ canvas {
     text-align: center;
 }
 body {
+    background-color: #333;
+}
+body.index {
     background-image: linear-gradient(to top, #040404, #333);
     width: 100%;
     height: auto;
+    background-size: cover;
 }
 
 #warning {

@@ -56,6 +56,10 @@ body {
     color: red;
     font-weight: 200;
 }
+#new {
+    color: #66ffff;
+    font-weight: bold;
+}
 #bottom {
     left: 0;
     bottom: 0;

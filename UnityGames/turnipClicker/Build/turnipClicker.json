@@ -1,7 +1,7 @@
 {
 "companyName": "Aqueous Caffiene Studios",
 "productName": "Turnip Clicker",
-"productVersion": "ALPHA 0.4.2",
+"productVersion": "Beta 0.1.6",
 "dataUrl": "turnipClicker.data.unityweb",
 "wasmCodeUrl": "turnipClicker.wasm.code.unityweb",
 "wasmFrameworkUrl": "turnipClicker.wasm.framework.unityweb",

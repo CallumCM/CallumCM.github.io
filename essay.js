@@ -1,5 +1,5 @@
-const net = new brain.recurrent.LSTM();
 function submit() {
+const net = new brain.recurrent.LSTM();
 var rawData = document.getElementById("input");
 var q = document.getElementById("q");
 var a = document.getElementById("answer");
@@ -16,5 +16,6 @@ console.log(`Neural net trained in ${(new Date() - d) /1000} seconds.`);
 q.style.display = "block";
 }
 function question() {
+    q = document.getElementById("q");
     document.getElementById("answer").innerHTML = net.run(q.value.toString);
 }

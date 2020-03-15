@@ -130,3 +130,19 @@ p {
 footer {
     text-align: center;
 }
+#q {
+    display: none;
+    border-radius: 5px;
+    height: 3.1em;
+    color: #141414;
+    font-size: 22px;
+}
+#answer {
+    display: none;
+    border-radius: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+textarea {
+    border-radius: 5px;
+}

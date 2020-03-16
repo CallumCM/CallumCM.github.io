@@ -145,4 +145,9 @@ footer {
 }
 textarea {
     border-radius: 5px;
+    width: 70%;
+    height: 10em;
+}
+.textarea {
+    text-align: center;
 }

@@ -11,16 +11,17 @@
         <a href="index.html">Home</a>
         <h3 class="title">Paste the thing you don't want to have to read in the text area, click the button, and await the prompt asking you for questions!</h3>
         <noscript>Please use JavaScript for the AI to function.</noscript>
-        <p class="title">MAKE SURE TO CHECK THE CONSOLE!</p>
         <div class="textarea">
             <textarea class="title" id="input" placeholder="Paste/type the body of text here..."></textarea>
         </div>
         <br><br>
-        <button class="title" onclick="submit()">SUBMIT ESSAY</button>
+        <div class="title">
+        <button onclick="submit()">SUBMIT ESSAY</button>
         <br><br>
         <input type="text" placeholder="Question..." id="q">
         <br><br>
         <button onclick="question()" class="title">SUBMIT QUESTION</button>
+        </div>
         <h5 id="answer">Computing...</h5>
     </body>
 </html>

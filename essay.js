@@ -34,7 +34,6 @@ function submit() {
         });
     }
     viewBar(false)
-    console.log("iterations: " + stats.iterations.toString() + " training error: " + stats.error.toString());
     console.log(`Neural net trained in ${(new Date() - d) /1000} seconds.`);
     q.style.display = "block";
     a.style.display = "block";

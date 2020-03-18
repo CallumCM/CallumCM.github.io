@@ -5,9 +5,13 @@
         <link href="index_files/css.css" rel="stylesheet">
         <link href="index_files/style.css" rel="stylesheet">
         <script src="https://cdn.rawgit.com/BrainJS/brain.js/45ce6ffc/browser.js"></script>
-        <script src="./essay.js"></script>
     </head>
     <body>
+        <div id="loading">
+            <div id="myProgress">
+                <div id="myBar">0%</div>
+            </div>
+        </div>
         <a href="index.html">Home</a>
         <h3 class="title">Paste the thing you don't want to have to read in the text area, click the button, and await the prompt asking you for questions!</h3>
         <noscript>Please use JavaScript for the AI to function.</noscript>
@@ -15,7 +19,7 @@
             <textarea class="title" id="input" placeholder="Paste/type the body of text here..."></textarea>
         </div>
         <br><br>
-        <div class="title">
+        <div class="textarea">
         <button onclick="submit()">SUBMIT ESSAY</button>
         <br><br>
         <input type="text" placeholder="Question..." id="q">
@@ -23,5 +27,6 @@
         <button onclick="question()" class="title">SUBMIT QUESTION</button>
         </div>
         <h5 id="answer">Computing...</h5>
+        <script src="./essay.js"></script>
     </body>
 </html>

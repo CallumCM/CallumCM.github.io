@@ -1,5 +1,4 @@
-var brain = require('https://cdn.rawgit.com/BrainJS/brain.js/45ce6ffc/browser.js');
-
+inportScripts("https://cdn.rawgit.com/BrainJS/brain.js/45ce6ffc/browser.js");
 const net = new brain.recurrent.LSTM();
 onmessage = function(e) {
     data = e.data[0];

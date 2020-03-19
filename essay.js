@@ -1,60 +1,38 @@
-var percent = document.getElementById("myBar");
+const net = new brain.recurrent.GRU();
+const rawData = document.getElementById("input");
+const a = document.getElementById("answer");
+const pcnt = document.getElementById("pcnt");
 function submit() {
-    var rawData = document.getElementById("input");
-    var q = document.getElementById("q");
-    var a = document.getElementById("answer");
+    loading(true);
     const data = rawData.value.toString().toLowerCase().split(/[\.\,\?\!\;]/);
-    var maxIter = parseInt(prompt("How much training? (More training takes longer but provides higher quality results)", "1000"))
+    var maxIter = parseInt(prompt("How much training? (More training takes longer but provides higher quality results)", "500"))
     var increment = 100/maxIter;
-    viewBar(true);
+    var step = 0; 
     console.log("Training neural net...");
     const d = new Date();
-    if(window.Worker) {
-        var worker = new Worker('worker.js');
-        worker.postMessage([data, maxIter]);
-        worker.onmessage = function(e) {
-            if(e.data[1] == 0) {
-                progress(e.data)
-            } else if(e.data[1] == 1) {
-                const net = e.data;
-            } else {
-                var stats = e.data;
-            }
-        }
-    }
-    else {
-        console.warn("Because web workers not supported, program is running on single thread. You will get a huge lag spike.");
-        var stats = net.train(data, {
+    const stats = net.train(data, {
         iterations: maxIter,
-        log: function() {
-            console.log();
+        log: false,
+        callback: function() {
+            step += 2*increment;
+            console.log(Math.round(step) + "%");
         },
-        logPeriod: 1,
+        callbackPeriod: 2,
         learningRate: 0.6
-        });
-    }
-    viewBar(false)
-    console.log(`Neural net trained in ${(new Date() - d) /1000} seconds.`);
-    q.style.display = "block";
+    });
+    console.log(`Net trained in ${(new Date() - d) /1000} seconds.`);
+    //console.log(`Net trained in ${maxIter} iterations.`);
+    console.log(stats)
     a.style.display = "block";
+    loading(false);
 }
 function question() {
-    q = document.getElementById("q");
-    var ans = document.getElementById("answer");
-    ans.innerHTML = net.run(q.value.toString) + ".";
+    a.innerHTML = net.run(prompt("Question?")) + ".";
 }
-function progress(Bpercent=0) {
-    percent.style.width = Bpercent + "%";
-    percent.innerHTML = Bpercent + "%";
-    return Bpercent
-
-}
-function viewBar(bool) {
+function loading(bool) {
     if(bool) {
-        document.querySelector("#loading").style.display = "block";
-    }
-    else {
-        document.querySelector("#loading").style.display = "none";
+        document.getElementById("loading").style.display = "block";
+    } else {
+        document.getElementById("loading").style.display = "none";
     }
 }
-document.getElementById("input").onchange = question();

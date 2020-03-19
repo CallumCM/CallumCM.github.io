@@ -152,25 +152,6 @@ textarea {
 .textarea {
     text-align: center;
 }
-#myProgress {
-    position: fixed;
-    left:2.5%;
-    top: 50%;
-    width: 95%;
-    background-color: rgb(235, 235, 235);
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px #0E0E0E;
-}
-#myBar {
-    width: 0%;
-    height: 30px;
-    background-color: rgb(241, 92, 209);
-    border-radius: 5px;
-    text-align: center; /* To center it horizontally (if you want) */
-    line-height: 30px; /* To center it vertically */
-    color: #333; 
-    padding: 10px;
-}
 #loading {
     position: fixed;
     margin: 0;
@@ -183,4 +164,26 @@ textarea {
 }
 #loading{
     display: none;
+}
+.loading {
+    margin: 15% auto;
+    margin-bottom: 1em;
+    border: solid 5px #d2dee9;
+    border-top: solid 5px #fa139a;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    animation: loading 1s infinite linear;
+}
+.loadingtxt {
+    margin: 0 auto;
+    text-align: center;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

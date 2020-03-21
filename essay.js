@@ -1,4 +1,6 @@
-const net = new brain.recurrent.GRU();
+const net = new brain.recurrent.GRU({
+    hiddenLayers: [60, 50, 40, 20, 10, 20]
+});
 const rawData = document.getElementById("input");
 const a = document.getElementById("answer");
 const pcnt = document.getElementById("pcnt");

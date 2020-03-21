@@ -1,4 +1,4 @@
-const net = new brain.recurrent.LSTM();
+const net = new brain.recurrent.GRU();
 const rawData = document.getElementById("input");
 const a = document.getElementById("answer");
 const pcnt = document.getElementById("pcnt");

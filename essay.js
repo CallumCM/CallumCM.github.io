@@ -1,6 +1,4 @@
-const net = new brain.recurrent.GRU({
-    hiddenLayers: [3,5]
-});
+const net = new brain.recurrent.GRU();
 const rawData = document.getElementById("input");
 const a = document.getElementById("answer");
 const pcnt = document.getElementById("pcnt");
@@ -33,11 +31,11 @@ function submit() {
         iterations: maxIter,
         log: false,
         callback: function() {
-            step += increment;
-            console.log(step + "%");
+            step += 2*increment;
+            console.log(Math.floor(step) + "%");
         },
-        callbackPeriod: 1,
-        learningRate: 0.8
+        callbackPeriod: 2,
+        learningRate: 0.4
     });
     console.log(`Net trained in ${(new Date() - d) /1000} seconds.`);
     //console.log(`Net trained in ${stats.iterations} iterations with ${stats.error} error`);

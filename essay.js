@@ -32,13 +32,13 @@ function submit() {
         log: false,
         callback: function() {
             step += increment;
-            console.log(Math.round(step) + "%");
+            console.log(step + "%");
         },
         callbackPeriod: 1,
         learningRate: 1.6
     });
     console.log(`Net trained in ${(new Date() - d) /1000} seconds.`);
-    //console.log(`Net trained in ${maxIter} iterations.`);
+    //console.log(`Net trained in ${stats.iterations} iterations with ${stats.error} error`);
     console.log(stats)
     a.style.display = "block";
     loading(false);

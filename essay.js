@@ -35,7 +35,7 @@ function submit() {
             console.log(step + "%");
         },
         callbackPeriod: 1,
-        learningRate: 1.6
+        learningRate: 0.8
     });
     console.log(`Net trained in ${(new Date() - d) /1000} seconds.`);
     //console.log(`Net trained in ${stats.iterations} iterations with ${stats.error} error`);

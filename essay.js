@@ -14,11 +14,11 @@ function submit() {
         iterations: maxIter,
         log: false,
         callback: function() {
-            step += 2*increment;
+            step += increment;
             console.log(Math.round(step) + "%");
         },
-        callbackPeriod: 2,
-        learningRate: 0.6
+        callbackPeriod: 1,
+        learningRate: 1.6
     });
     console.log(`Net trained in ${(new Date() - d) /1000} seconds.`);
     //console.log(`Net trained in ${maxIter} iterations.`);

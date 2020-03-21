@@ -1,5 +1,5 @@
 const net = new brain.recurrent.GRU({
-    hiddenLayers: [6,2,4]
+    hiddenLayers: [1,2,4]
 });
 const rawData = document.getElementById("input");
 const a = document.getElementById("answer");

@@ -142,6 +142,8 @@ footer {
     border-radius: 5px;
     font-size: 30px;
     text-align: center;
+}
+#answer:first-letter {
     text-transform: capitalize;
 }
 textarea {

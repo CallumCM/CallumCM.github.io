@@ -1,4 +1,6 @@
-const net = new brain.recurrent.GRU();
+const net = new brain.recurrent.GRU({
+
+});
 const rawData = document.getElementById("input");
 const a = document.getElementById("answer");
 const pcnt = document.getElementById("pcnt");
@@ -22,20 +24,22 @@ function getUncommon(sentence, common) {
 function submit() {
     loading(true);
     const data = rawData.value.toString().toLowerCase().split(/[\.\,\?\!\;]/);
-    var maxIter = parseInt(prompt("How much training? (More training takes longer but provides higher quality results)", "500"))
-    var increment = 100/maxIter;
-    var step = 0; 
+    //var maxIter = parseInt(prompt("How much training? (More training takes longer but provides higher quality results)", "2500"))
+    //var increment = 100/maxIter;
+    //var step = 0; 
+    var errorT = prompt("Quality of training: (lower is better, may take exponentially long to compute though)", "0.4");
     console.log("Training neural net...");
     const d = new Date();
     const stats = net.train(data, {
-        iterations: maxIter,
-        log: false,
-        callback: function() {
-            step += 2*increment;
-            console.log(Math.floor(step) + "%");
-        },
-        callbackPeriod: 2,
-        learningRate: 0.4
+        iterations: Infinity, //maxIter,
+        errorThresh: errorT,
+        log: true,
+        //callback: function() {
+            //step += increment;
+            //console.log(Math.floor(step) + "%");
+        //},
+        logPeriod: 2,
+        //callbackPeriod: 1,
     });
     console.log(`Net trained in ${(new Date() - d) /1000} seconds.`);
     //console.log(`Net trained in ${stats.iterations} iterations with ${stats.error} error`);
@@ -44,7 +48,8 @@ function submit() {
     loading(false);
 }
 function question() {
-    a.innerHTML = net.run(getUncommon(prompt("Question?"), common)) + ".";
+    ans = net.run(getUncommon(prompt("Question?"), common));
+    a.innerHTML = ans + ".";
 }
 function loading(bool) {
     if(bool) {

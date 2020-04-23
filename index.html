@@ -25,12 +25,21 @@
             </ul>
         </nav>
         <br><br><br><br><br>
-        <h3 class="title">Drawing Challenge: Draw a <strong>What-You'd-Sign-on-my-Cast, were there no social distancing. The cast is on my arm BTW</strong></h3>
+        
         <div id="drawholder"></div>
         <p class="title">Brush Color: <input class="title" name="color" id='bcolor' type="color"/></p>
         <div class="buttonContainer">
             <button class="title" onclick="cleardraw()">Clear</button>
-            </div>
+            <button><a class='button' target='_blank' id='btn-fetch'>Get Image</a></button>
+        </div>
+        <script src="./dailydraw.js"></script>
+        <script>
+            var button = document.getElementById('btn-fetch');
+            button.addEventListener('click', function (e) {
+                var dataURL = canvas.toDataURL('image/png');
+                button.href = dataURL;
+            });
+        </script>
         <br><br><br><br>
         <script src="./index_files/p5.js"></script>
         <h3 class="title">Gramatical French Sentance Generator</h3>

@@ -35,10 +35,11 @@
         <script src="./dailydraw.js"></script>
         <script>
             var button = document.getElementById('btn-fetch');
-            button.addEventListener('onclick', function (e) {
+            button.onclick = function(e) {
                 var dataURL = canvas.toDataURL('image/png');
-                button.href = dataURL;
-            });
+                window.href = dataURL;
+                window.open(dataURL)
+            }
         </script>
         <br><br><br><br>
         <script src="./index_files/p5.js"></script>

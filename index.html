@@ -35,7 +35,7 @@
         <script src="./dailydraw.js"></script>
         <script>
             var button = document.getElementById('btn-fetch');
-            button.addEventListener('click', function (e) {
+            button.addEventListener('onclick', function (e) {
                 var dataURL = canvas.toDataURL('image/png');
                 button.href = dataURL;
             });

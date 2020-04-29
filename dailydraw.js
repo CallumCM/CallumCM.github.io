@@ -29,5 +29,6 @@ function erasorPen() {
 }
 function penErasor() {
     document.getElementById('bcolor').value = "#010101";
-    document.getElementById('bcolor').style.visibility = "visible"; 
+    document.getElementById('bcolor').style.visibility = "visible";
+    document.getElementById('hue').style.visibility = "visible"; 
 }

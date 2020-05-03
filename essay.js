@@ -23,23 +23,23 @@ function getUncommon(sentence, common) {
 }
 function submit() {
     loading(true);
-    const data = rawData.value.toString().toLowerCase().split(/[\.\,\?\!\;]/);
-    //var maxIter = parseInt(prompt("How much training? (More training takes longer but provides higher quality results)", "2500"))
-    //var increment = 100/maxIter;
-    //var step = 0; 
-    var errorT = prompt("Quality of training: (lower is better, may take exponentially long to compute though. Don't go lower than 0.1)", "0.4");
+    const data = rawData.value.toString().toLowerCase().split(/[\ \.\,\?\!\;]/);
+    var maxIter = parseInt(prompt("How much training? (More training takes longer but provides higher quality results)", "2500"))
+    var increment = 100/maxIter;
+    var step = 0; 
+    //var errorT = prompt("Quality of training: (lower is better, may take exponentially long to compute though. Don't go lower than 0.1)", "0.4");
     console.log("Training neural net...");
     const d = new Date();
     const stats = net.train(data, {
-        iterations: Infinity, //maxIter,
+        iterations: maxIter,
         errorThresh: errorT,
         log: true,
-        //callback: function() {
-            //step += increment;
-            //console.log(Math.floor(step) + "%");
-        //},
+        callback: function() {
+            step += increment;
+            console.log(Math.floor(step) + "%");
+        },
         logPeriod: 2,
-        //callbackPeriod: 1,
+        callbackPeriod: 1,
     });
     console.log(`Net trained in ${(new Date() - d) /1000} seconds.`);
     //console.log(`Net trained in ${stats.iterations} iterations with ${stats.error} error`);

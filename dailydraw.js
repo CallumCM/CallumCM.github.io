@@ -2,7 +2,6 @@ function setup() {
     var canvas = createCanvas(710, 400);
     var slider = document.getElementById("slider")
     canvas.parent('drawholder');
-    canvas.id = 'editor'
     background("#bbb");
     document.getElementById('bcolor').value = "#010101";
     strokeWeight(7);

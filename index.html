@@ -18,13 +18,13 @@
         <br />
         <nav>
             <ul class="list">
-                <li><a href="#">Games</a><ul><li><a id="new" href="./UnityGames/s/s.htm">Relaxing abstract thing</a></li><li><a href="./UnityGames/turnipClicker/tclick.htm">Turnip Clicker<br />BETA</a></li><li><a href="./UnityGames/oodgel/oodgel.htm">Oodgel</a></li><li><a id="warning"  href="./UnityGames/treeclick/tree.htm">Lame Christmastree Clicker - DEPRECATED</a></li></ul></li>
+                <li><a href="#">Games</a><ul><li><a id="new" href="#"></a></li><li><a href="./UnityGames/turnipClicker/tclick.htm">Turnip Clicker<br />BETA</a></li><li><a href="./UnityGames/oodgel/oodgel.htm">Oodgel</a></li><li><a id="warning"  href="./UnityGames/treeclick/tree.htm">Lame Christmastree Clicker - DEPRECATED</a></li></ul></li>
                 <li><a href="#">Tutorials</a><ul><li><a  href="./tips.html">Using fancy software</a></li></ul></li>
-                <li><a href="#">Experiments</a><ul><li><a  href="./joke.html">Lame Joke Gen.</a></li><li><a  href="./UnityGames/plates/plates.htm">Tectonic Plates Sim.</a></li></ul></li>
+                <li><a href="#">Experiments</a><ul><li><a  href="./joke.html">Lame Joke Gen.</a></li><li><a href="./UnityGames/s/s.htm">Relaxing abstract thing</a></li><li><a  href="./UnityGames/plates/plates.htm">Tectonic Plates Sim.</a></li></ul></li>
             </ul>
         </nav>
         <br><br><br><br><br>
-        <h3 class="title">Drawing Challenge: Draw a <strong>What-You'd-Sign-on-my-Cast, were there no social distancing. The cast is on my arm BTW</strong></h3>
+        <h3 class="title">Drawing Challenge: Draw a <strong>troll, and his friends</strong></h3>
         <div id="drawholder"></div>
         <h2 id="hue" class="title">Brush Hue: <input class="title" name="brush color" id='bcolor' type="color"/></h2>
         <div class="buttonContainer">
@@ -44,7 +44,9 @@
         <script>
             var button = document.getElementById('btn-fetch');
             button.onclick = function(e) {
-                var dataURL = canvas.toDataURL('image/png');
+                cvs = document.querySelector('canvas');
+                var dataURL = cvs.toDataURL('image/jpeg');
+                
                 window.href = dataURL;
                 window.open(dataURL)
             }

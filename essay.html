@@ -2,30 +2,22 @@
     <head>
         <meta charset="utf-8">
         <title>GeekVeggie | Text Analyzer</title>
-        <link href="index_files/css.css" rel="stylesheet">
-        <link href="index_files/style.css" rel="stylesheet">
-        <script src="https://unpkg.com/brain.js"></script>
+        <link href="./index_files/css.css" rel="stylesheet">
+        <link href="./index_files/style.css" rel="stylesheet">
+        <script src="./brain.js""></script>
     </head>
     <body>
-        <div id="loading">
-            <div class="loading"></div>
-            <h2 class="loadingtxt">Loading...</h2>
-        </div>
+        <h1 id="iner"></h1>
         <a href="index.html">Home</a>
-        <h3 class="title">Paste the thing you don't want to have to read in the text area, click the button, and await the prompt asking you for questions!</h3>
-        <h4 class="title">This works best with long articles (>100 words), this may take a while to compute. To get a percentage, open the console before you submit.</h4>
+        <h3 class="title">This AI will tell you how to fix your IT problem. Enter the problem in clear English in the textarea. It will tell you how to fix it at the bottom.</h3>
+        <h4 class="title">This is a joke, don't actually trust this!</h4>
+        <h4 class="title">This may take a while to compute. To get a percentage, open the console before you submit.</h4>
         <noscript>Please use JavaScript for the AI to function.</noscript>
-        <div class="textarea">
-            <textarea class="title" id="input" placeholder="Paste/type the body of text here..."></textarea>
-        </div>
-        <br><br>
-        <div class="textarea">
-        <button onclick="submit()">SUBMIT ESSAY</button>
-        <br><br>
-        <button onclick="question()" class="title">SUBMIT QUESTION</button>
-        </div>
-        <br><br><br><br><br><br>
-        <h3 id="answer">answer will be here...</h3>
+        <div class="title"><button onclick="submit()" class="title">SUBMIT QUESTION</button></div>
+        <br>
+        <div class="title"><button onclick="trainet()" class="title">TRAIN NET</button></div>
+        <br><br><br><br><br>
+        <h3 id="answer">Answer will be here...</h3>
         <script src="./essay.js"></script>
     </body>
 </html>

@@ -44,24 +44,10 @@
         <script>
             var button = document.getElementById('btn-fetch');
             button.onclick = function(e) {
-                cvs = document.querySelector('canvas');
-                var dataURL = cvs.toDataURL('image/jpeg');
-                
-                window.href = dataURL;
-                window.open(dataURL)
-                function download(filename, text) {
-                    var element = document.createElement('a');
-                    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-                    element.setAttribute('download', filename);
-                  
-                    element.style.display = 'none';
-                    document.body.appendChild(element);
-                  
-                    element.click();
-                  
-                    document.body.removeChild(element);
-                }
-                download("dailyDrawingChallenge.png", dataURL)  
+                var download = document.getElementById("download");
+                var image = document.getElementById("editor").toDataURL("image/png")
+                            .replace("image/png", "image/octet-stream");
+                download.setAttribute("href", image);
             }
         </script>
         <br><br><br><br>

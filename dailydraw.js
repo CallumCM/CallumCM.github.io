@@ -17,6 +17,7 @@ function draw() {
 slider.oninput = function() {
     strokeWeight(slider.value);
 }
+
 function cleardraw() {
     background("#bbb");
 }

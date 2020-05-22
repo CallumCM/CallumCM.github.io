@@ -1,0 +1,47 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: linear-gradient(to top, rgb(218, 255, 243), azure);
+}
+.main {
+    margin: 0 auto;
+    border-radius: 2%;
+    background-color: slategray;
+    width: 90vh;
+    height: auto;
+}
+.center {
+    text-align: center;
+}
+td {
+    border: #020202 1px solid;
+    width: 9vh;
+    height: 9vh;
+    border-radius: 10%;
+    margin: auto auto;
+}
+table {
+    text-align: center;
+    margin: 0 auto;
+}
+td:hover {
+    background-color: azure;
+}
+td:active {
+    background-color: rgb(137, 180, 180);
+}
+.button {
+    border: 0;
+    width: auto;
+    height: auto;
+    background-color: rgb(179, 255, 0);
+    border-radius: 4%;
+    width: 10%;
+    height: 5%;
+    margin: 1% auto;
+    font-size: 15px;
+}
+.button:focus {
+    background: rgb(238, 255, 0);
+}

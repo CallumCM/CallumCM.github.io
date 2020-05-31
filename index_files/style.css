@@ -222,3 +222,12 @@ textarea {
         transform: rotate(360deg);
     }
 }
+#biglink {
+    font-size: 30px;
+}
+#biglink:hover {
+    color: #505050;
+}
+#biglink:active {
+    color: #ffffff;
+}

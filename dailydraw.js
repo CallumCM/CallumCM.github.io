@@ -7,6 +7,7 @@ function setup() {
     strokeWeight(7);
     slider.value = 7;
     stroke(color(document.getElementById("bcolor").value.toString()));
+    canvas.id = "editor"
 }
 function draw() {
     if(mouseIsPressed) {

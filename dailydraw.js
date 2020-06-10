@@ -1,5 +1,5 @@
 function setup() {
-    var canvas = createCanvas(710, 400);
+    var canvas = createCanvas(750*1.3, 440*1.3);
     var slider = document.getElementById("slider")
     canvas.parent('drawholder');
     background("#bbb");
@@ -26,7 +26,6 @@ function erasorPen() {
     document.getElementById('bcolor').value = "#bbbbbb";
     document.getElementById('bcolor').style.visibility = "hidden"; 
     document.getElementById('hue').style.visibility = "hidden"; 
-    strokeWeight(32);
 }
 function penErasor() {
     document.getElementById('bcolor').value = "#010101";

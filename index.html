@@ -25,12 +25,14 @@
             </ul>
         </nav>
         <br><br><br><br><br>
-        <h3 class="title">Drawing Challenge: Draw a <strong>troll, and his friends</strong></h3>
+        <div id = "fullscreen">
+        <h3 class="title">Drawing Challenge: Draw a <b>computer from the 1200s</b></h3>
         <div id="drawholder"></div>
         <h2 id="hue" class="title">Brush Hue: <input class="title" name="brush color" id='bcolor' type="color"/></h2>
         <div class="buttonContainer">
             <button onclick="erasorPen();" id='erasor'>Eraser</button>
             <button onclick="penErasor();" id='pen'>Pen</button>
+            <button onclick="fullscreen();" id='fs'>Toggle Full Screen</button>
         </div>
         <br />
         <div class=title>
@@ -43,13 +45,51 @@
             <button id='btn-fetch'>Get Image</button>
         </div>
         <script>
+            function openFullscreen(elem) {
+                if (elem.requestFullscreen) {
+                  elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                  elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                  elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                  elem.msRequestFullscreen();
+                }
+            }
+            function closeFullscreen() {
+                if (document.exitFullscreen) {
+                  document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                  document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                  document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                  document.msExitFullscreen();
+                }
+              }
+            var full = false;
             var button = document.getElementById('btn-fetch');
             button.onclick = function(e) {
                 var download = document.getElementById("btn-fetch");
                 var image = document.getElementById("editor").toDataURL("image/png").replace("image/png", "image/octet-stream");
                 download.setAttribute("href", image);
             }
+            var button1 = document.getElementById('fs');
+            var sc = document.getElementById('fullscreen');
+            button1.onclick = function(event) {
+                switch (full) {
+                    case false:
+                        full = true;
+                        openFullscreen(sc);
+                        break;
+                    case true:
+                        full = false;
+                        closeFullscreen(sc);
+                        break;
+                }
+            }
         </script>
+        </div>
         <br><br><br><br>
         <script src="./index_files/p5.js"></script>
         <h3 class="title">Gramatical English Sentance Generator</h3><h3 class="title">Credit to: Alex, Josh, and me</h3>

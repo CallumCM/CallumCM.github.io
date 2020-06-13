@@ -21,7 +21,7 @@
             <ul class="list">
                 <li><a href="#">Games</a><ul><li><!--<a id="new" href="./sudoku.html">Sudoku</a>--></li><li><a href="./UnityGames/turnipClicker/tclick.htm">Turnip Clicker<br /></a></li><li><a href="./UnityGames/oodgel/oodgel.htm">Oodgel</a></li><li><a id="warning"  href="./UnityGames/treeclick/tree.htm">Lame Christmastree Clicker - DEPRECATED</a></li></ul></li>
                 <li><a href="#">Tutorials</a><ul><li><a  href="./tips.html">Using fancy software</a></li></ul></li>
-                <li><a href="#">Experiments</a><ul><li><a  href="./joke.html">Lame Joke Gen.</a></li><li><a href="./UnityGames/s/s.htm">Relaxing abstract thing</a></li><li><a  href="./UnityGames/plates/plates.htm">Tectonic Plates Sim.</a></li></ul></li>
+                <li><a href="#">Experiments</a><ul><li><a href="fractal.html">Fractal Of The Day</a></li><li><a  href="./joke.html">Lame Joke Gen.</a></li><li><a href="./UnityGames/s/s.htm">Relaxing abstract thing</a></li><li><a  href="./UnityGames/plates/plates.htm">Tectonic Plates Sim.</a></li></ul></li>
             </ul>
         </nav>
         <br><br><br><br><br>
@@ -70,9 +70,7 @@
             var full = false;
             var button = document.getElementById('btn-fetch');
             button.onclick = function(e) {
-                var download = document.getElementById("btn-fetch");
-                var image = document.getElementById("editor").toDataURL("image/png").replace("image/png", "image/octet-stream");
-                download.setAttribute("href", image);
+                
             }
             var button1 = document.getElementById('fs');
             var sc = document.getElementById('fullscreen');

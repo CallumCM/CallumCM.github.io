@@ -7,9 +7,7 @@ function mandelIter(cx, cy, maxIter) {
    
     var i = maxIter;
     while (i-- && xx + yy <= 4) {
-      //xy = Math.abs(x * y);
-          //xy = -(x * y);
-          xy = (x * y);
+      xy = Math.abs(x * y);
       xx = x * x;
       yy = y * y;
       x = xx - yy + cx;
@@ -62,8 +60,8 @@ function mandelIter(cx, cy, maxIter) {
   }
   
   var canvas = document.createElement('canvas');
-  canvas.width = 4000;
-  canvas.height = 4000;
+  canvas.width = 2000;
+  canvas.height = 2000;
   
   document.body.insertBefore(canvas, document.body.childNodes[0]);
   

@@ -42,9 +42,13 @@
         <br /><br />
         <div class="buttonContainer">
             <button class="title" onclick="cleardraw()">C L E A R</button>
-            <button id='btn-fetch'>Get Image</button>
+            <br /><br />
+            <button class="btn" style="width:100%"><i class="fa fa-download"></i> Download Image</button>
         </div>
         <script>
+            function canvas() {
+              download(Document.getElementById("editor").toDataURL("img/png"), "Your Beautiful Drawing");
+            };
             function openFullscreen(elem) {
                 if (elem.requestFullscreen) {
                   elem.requestFullscreen();
@@ -55,7 +59,7 @@
                 } else if (elem.msRequestFullscreen) { /* IE/Edge */
                   elem.msRequestFullscreen();
                 }
-            }
+            };
             function closeFullscreen() {
                 if (document.exitFullscreen) {
                   document.exitFullscreen();
@@ -66,12 +70,12 @@
                 } else if (document.msExitFullscreen) { /* IE/Edge */
                   document.msExitFullscreen();
                 }
-              }
+              };
             var full = false;
             var button = document.getElementById('btn-fetch');
             button.onclick = function(e) {
-                
-            }
+                canvas()
+            };
             var button1 = document.getElementById('fs');
             var sc = document.getElementById('fullscreen');
             button1.onclick = function(event) {
@@ -84,8 +88,8 @@
                         full = false;
                         closeFullscreen(sc);
                         break;
-                }
-            }
+                };
+            };
         </script>
         </div>
         <br><br><br><br>
@@ -100,5 +104,6 @@
         <h1 class="title">Subterfuge - deception by artifice or stratagem in order to conceal, escape, or evade</h1>
         <br><br><br><br><br><br><br><br><br>
         <script src="./dailydraw.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet">
     </body>
 </html>

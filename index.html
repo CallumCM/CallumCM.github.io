@@ -43,12 +43,11 @@
         <div class="buttonContainer">
             <button class="title" onclick="cleardraw()">C L E A R</button>
             <br /><br />
-            <button class="btn" style="width:100%"><i class="fa fa-download"></i> Download Image</button>
+            <button class="btn" id="btn-download" style="width:100%"><i class="fa fa-download"></i> Download Image</button>
         </div>
+        <script src="./dailydraw.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet">
         <script>
-            function canvas() {
-              download(Document.getElementById("editor").toDataURL("img/png"), "Your Beautiful Drawing");
-            };
             function openFullscreen(elem) {
                 if (elem.requestFullscreen) {
                   elem.requestFullscreen();
@@ -72,9 +71,9 @@
                 }
               };
             var full = false;
-            var button = document.getElementById('btn-fetch');
+            var button = document.getElementById('btn-download');
             button.onclick = function(e) {
-                canvas()
+              saveCanvas(canvas, "Your Beautiful Drawing",  'png');
             };
             var button1 = document.getElementById('fs');
             var sc = document.getElementById('fullscreen');
@@ -103,7 +102,5 @@
         <h3 class="title">Word of the month:</h3>
         <h1 class="title">Subterfuge - deception by artifice or stratagem in order to conceal, escape, or evade</h1>
         <br><br><br><br><br><br><br><br><br>
-        <script src="./dailydraw.js"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet">
     </body>
 </html>

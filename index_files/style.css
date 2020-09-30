@@ -231,3 +231,7 @@ textarea {
 #biglink:active {
     color: #ffffff;
 }
+.underline {
+    text-decoration: underline;
+    font-size: larger;
+}

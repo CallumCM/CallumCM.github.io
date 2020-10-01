@@ -83,9 +83,8 @@ body.index {
     color: #888;
 }
 button:hover {
-    border-radius: 3px;
-    border: 0;
-    box-shadow: 0 12px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 2px solid rgb(100, 252, 107);
+    box-shadow: 0 12px 1px 0 rgba(0,0,0,0.24), 0 7px 6px 0 rgba(0,0,0,0.19);
     background-color: rgb(100, 252, 107);
     color: #141414;
 }
@@ -102,6 +101,7 @@ button {
     text-align: center;
 }
 button:active {
+    border: 0;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     background-color: rgb(23, 77, 26);
     color: #d2dee9;

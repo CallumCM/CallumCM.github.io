@@ -14,7 +14,7 @@
 }
 .list li {
     display: inline-block;
-    padding: 0.8em 1.3em;
+    padding: 0.75em 2em;
     border-radius: 4px;
     background-color: #141414;
     border-bottom: 2px solid #000;
@@ -24,9 +24,10 @@
     position: absolute;
     display: block;
     margin-top: 0.9em;
-    left: -2em;
+    margin: 0.8em -50%;
 }
 .list li ul li {
+    padding: 1em 1.2em;
     display: none;
     animation: dropdown 0.5s;
 }

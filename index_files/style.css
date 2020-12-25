@@ -23,8 +23,7 @@
 .list li ul{
     position: absolute;
     display: block;
-    margin-top: 0.9em;
-    margin: 0.8em -50%;
+    margin: 0.91em -50%;
 }
 .list li ul li {
     padding: 1em 1.2em;

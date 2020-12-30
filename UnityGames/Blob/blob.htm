@@ -6,11 +6,8 @@
     <title>Unity WebGL Player | Blob</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="stylesheet" href="../../index_files/style.css">
-    <link rel="stylesheet" href="../../index_files/css.css">
   </head>
   <body>
-    <a href="../../index.html">Home</a>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
@@ -27,15 +24,15 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/2020.1r2.loader.js";
+      var loaderUrl = buildUrl + "/2020.1r4.loader.js";
       var config = {
-        dataUrl: buildUrl + "/2020.1r2.data.br",
-        frameworkUrl: buildUrl + "/2020.1r2.framework.js.br",
-        codeUrl: buildUrl + "/2020.1r2.wasm.br",
+        dataUrl: buildUrl + "/2020.1r4.data.br",
+        frameworkUrl: buildUrl + "/2020.1r4.framework.js.br",
+        codeUrl: buildUrl + "/2020.1r4.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "GeekVeggie inc.",
         productName: "Blob",
-        productVersion: "2020.1r2",
+        productVersion: "2020.1r4",
       };
 
       var container = document.querySelector("#unity-container");

@@ -5,11 +5,11 @@
 "dataUrl": "turnipClicker.data.unityweb",
 "wasmCodeUrl": "turnipClicker.wasm.code.unityweb",
 "wasmFrameworkUrl": "turnipClicker.wasm.framework.unityweb",
-"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
 "splashScreenStyle": "Dark",
 "backgroundColor": "#231F20",
-"developmentBuild": false,
+"developmentBuild": true,
 "multithreading": false,
 "unityVersion": "2019.3.0f3"
 }

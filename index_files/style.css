@@ -1,38 +1,61 @@
-@keyframes dropdown {
-    0%   { margin-top: 0em; }
-    50%  { margin-top: 0.9em; }
-    100% { margin-top: 0em;}
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.05);
 }
-.list {
-    margin: 0;
-    padding: 0;
-    background-color: #252525;
-    display: inline-block;
-    width: auto;
-    list-style-type: none;
-    border-radius: 3px;
+
+.dropbtn {
+  background-color: #d636ae;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
-.list li {
-    display: inline-block;
-    padding: 0.75em 2em;
-    border-radius: 4px;
-    background-color: #141414;
-    border-bottom: 2px solid #000;
-    position: relative;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
-.list li ul{
-    position: absolute;
-    display: block;
-    margin: 0.91em -50%;
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 0px 5px 5px 5px;
 }
-.list li ul li {
-    padding: 1em 1.2em;
-    display: none;
-    animation: dropdown 0.5s;
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
-.list li:hover ul li{
-    display: block;
+
+.dropdown-content a:first-child:hover {
+    border-radius: 0px 5px 0px 0px !important;
 }
+
+.dropdown-content a:last-child:hover {
+    border-radius: 0px 0px 5px 5px !important;
+}
+
+.dropdown-content a:hover {
+    background-color: #b1b1b1;
+    border-radius: 0px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ff6ddb;
+  border-radius: 5px 5px 0px 0px;
+}
+
 canvas {
     background-color: #AAAAAA;
     margin-right: auto;
@@ -82,13 +105,13 @@ body.index {
     text-shadow: 0px 2px 3px #020202;
     color: #888;
 }
-button:hover {
+button:not(.dropbtn):hover {
     border: 2px solid rgb(100, 252, 107);
     box-shadow: 0 12px 1px 0 rgba(0,0,0,0.24), 0 7px 6px 0 rgba(0,0,0,0.19);
     background-color: rgb(100, 252, 107);
     color: #141414;
 }
-button {
+button:not(.dropbtn) {
     transition-duration: 0.4s;
     background-color: rgba(0,0,0,0);
     padding: 10px 30px;
@@ -100,7 +123,7 @@ button {
 .buttonContainer {
     text-align: center;
 }
-button:active {
+button:not(.dropbtn):active {
     border: 0;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     background-color: rgb(23, 77, 26);
@@ -151,34 +174,34 @@ footer {
     text-transform: capitalize;
 }
 .slider {
-    -webkit-appearance: none;
-    width: 75%;
-    height: 15px;
-    border-radius: 5px;  
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%; 
-    background: rgb(114, 21, 86);
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: rgb(114, 21, 86);
-    cursor: pointer;
-  }
+  -webkit-appearance: none;
+  width: 75%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: rgb(114, 21, 86);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(114, 21, 86);
+  cursor: pointer;
+}
 textarea {
     border-radius: 5px;
     width: 70%;
@@ -186,50 +209,6 @@ textarea {
 }
 .textarea {
     text-align: center;
-}
-#loading {
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.8);
-}
-#loading{
-    display: none;
-}
-.loading {
-    margin: 15% auto;
-    margin-bottom: 1em;
-    border: solid 5px #d2dee9;
-    border-top: solid 5px #fa139a;
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-    animation: loading 1s infinite linear;
-}
-.loadingtxt {
-    margin: 0 auto;
-    text-align: center;
-}
-@keyframes loading {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-#biglink {
-    font-size: 30px;
-}
-#biglink:hover {
-    color: #505050;
-}
-#biglink:active {
-    color: #ffffff;
 }
 .underline {
     text-decoration: underline;

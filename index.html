@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta charset="utf-8">
         <link href="index_files/css.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet">
         <link href="index_files/style.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
         <meta name="robots" content="index, follow">
@@ -18,14 +19,43 @@
         <noscript>Your browser doesn't support JavaScript or it isn't enabled, all of the programs here use JavaScript to run.</noscript>
         <h1 class="title">Welcome to GeekVeggie!</h1>
         <br />
+
+        <nav class="dropdown-menu">
+          <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
+                <a href="./UnityGames/Blob/blob.htm">Blob</a>
+                <a href="./UnityGames/turnipClicker/tclick.htm">Turnip Clicker</a>
+                <a href="./UnityGames/oodgel/oodgel.htm">Oodgel</a>
+                <a href="./UnityGames/treeclick/tree.htm" id="warning">Christmastree Clicker</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Tutorials</button>
+            <div class="dropdown-content">
+                <a href="./tips.html">How to Approach Learning Fancy Software</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Experiments</button>
+            <div class="dropdown-content">
+                <a  href="./joke.html">Lame Joke Gen.</a>
+                <a href="./UnityGames/s/s.htm">Relaxing abstract thing</a>
+                <a  href="./UnityGames/plates/plates.htm">Procedural Landmass Generation</a></li>
+            </div>
+          </div>
+        </nav>
+
+        <!--
         <nav>
             <ul class="list">
-                <li><a href="#">Games</a><ul><li><a id="new" href="./UnityGames/Blob/blob.htm">Blob</a></li><li><a href="./UnityGames/turnipClicker/tclick.htm">Turnip Clicker<br /></a></li><li><a href="./UnityGames/oodgel/oodgel.htm">Oodgel</a></li><li><a id="warning"  href="./UnityGames/treeclick/tree.htm">Christmastree Clicker - DEPRECATED</a></li></ul></li>
-                <li><a href="#">Tutorials</a><ul><!--<li><a href="./exfractal.html">What Are Fractals?</a></li>--><li><a  href="./tips.html">How to Approach Learning Fancy Software</a></li></ul></li>
+                <li><a href="#">Games</a><ul><li><a href="./UnityGames/Blob/blob.htm">Blob</a></li><li><a href="./UnityGames/turnipClicker/tclick.htm">Turnip Clicker<br /></a></li><li><a href="./UnityGames/oodgel/oodgel.htm">Oodgel</a></li><li><a id="warning"  href="./UnityGames/treeclick/tree.htm">Christmastree Clicker - DEPRECATED</a></li></ul></li>
+                <li><a href="#">Tutorials</a><ul><li><a  href="./tips.html">How to Approach Learning Fancy Software</a></li></ul></li>
                 <li><a href="#">Experiments</a><ul><li><a  href="./joke.html">Lame Joke Gen.</a></li><li><a href="./UnityGames/s/s.htm">Relaxing abstract thing</a></li><li><a  href="./UnityGames/plates/plates.htm">Procedural Landmass Generation</a></li></ul></li>
             </ul>
         </nav>
         <br><br><br><br><br>
+        -->
         <div id = "fullscreen">
         <h3 class="title">Drawing Challenge: Draw a <strong class="underline">Bob Ross painting</strong></h3>
         <div id="drawholder"></div>
@@ -46,56 +76,12 @@
             <br /><br />
             <button class="btn" id="btn-download" style="width:100%"><i class="fa fa-download"></i> Download Image</button>
         </div>
-        <script src="./dailydraw.js"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet">
-        <script>
-            function openFullscreen(elem) {
-                if (elem.requestFullscreen) {
-                  elem.requestFullscreen();
-                } else if (elem.mozRequestFullScreen) { // Firefox
-                  elem.mozRequestFullScreen();
-                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                  elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { // IE/Edge
-                  elem.msRequestFullscreen();
-                }
-            };
-            function closeFullscreen() {
-                if (document.exitFullscreen) {
-                  document.exitFullscreen();
-                } else if (document.mozCancelFullScreen) { // Firefox
-                  document.mozCancelFullScreen();
-                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
-                  document.webkitExitFullscreen();
-                } else if (document.msExitFullscreen) { // IE/Edge
-                  document.msExitFullscreen();
-                }
-              };
-            var full = false;
-            var button = document.getElementById('btn-download');
-            button.onclick = function(e) {
-              saveCanvas(canvas, "Your Beautiful Drawing",  'png');
-            };
-            var button1 = document.getElementById('fs');
-            var sc = document.getElementById('fullscreen');
-            button1.onclick = function(event) {
-                switch (full) {
-                    case false:
-                        full = true;
-                        openFullscreen(sc);
-                        break;
-                    case true:
-                        full = false;
-                        closeFullscreen(sc);
-                        break;
-                };
-            };
-        </script>
         </div>
         <br><br><br><br>
         <script src="./index_files/p5.js"></script>
         <h3 class="title">Word of the month:</h3>
-        <h1 class="title"><strong class="underline">Floccinaucinihilipilification</strong> - The act of regarding something as unimportant</h1>
-        <br><br><br><br><br><br><br><br><br>
+        <h1 class="title wordoftheday"><strong class="underline">Floccinaucinihilipilification</strong> - The act of regarding something as unimportant</h1>
+        <script src="./dailydraw.js"></script>
+        <script src="./fullscreen.js"></script>
     </body>
 </html>

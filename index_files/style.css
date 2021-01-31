@@ -34,12 +34,16 @@
   display: block;
 }
 
+.dropdown-content a:only-child:hover {
+    border-radius: 5px !important;
+}
+
 .dropdown-content a:first-child:hover {
-    border-radius: 0px 5px 0px 0px !important;
+    border-radius: 0px 5px 0px 0px;
 }
 
 .dropdown-content a:last-child:hover {
-    border-radius: 0px 0px 5px 5px !important;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .dropdown-content a:hover {

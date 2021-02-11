@@ -35,7 +35,7 @@
 }
 
 .dropdown-content a:only-child:hover {
-    border-radius: 5px !important;
+    border-radius: 0px 5px 5px 5px !important;
 }
 
 .dropdown-content a:first-child:hover {

@@ -35,6 +35,9 @@
   z-index: 1;
   border-radius: 0px 5px 5px 5px;
 }
+.wide-dropdown-content {
+    min-width: 225px !important;
+}
 
 .dropdown-content a {
   color: black;

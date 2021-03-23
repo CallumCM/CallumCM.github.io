@@ -1,2 +1,2 @@
 # turnip1234.github.io - my website
-I put interesting games, experiments, tutorials and 'tools' here.
+I put kinda interesting games, experiments, tutorials and 'tools' here.

@@ -1,1 +1,1 @@
-document.getElementsById("video").src = prompt("link");
+document.getElementById("video").src = prompt("link");

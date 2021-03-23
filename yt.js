@@ -1,1 +1,1 @@
-document.getElementById("video").src = prompt("link");
+document.getElementById("video").src = "https://www.youtube-nocookie.com/embed/" + prompt("Youtube ID");

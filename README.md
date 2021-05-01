@@ -1,2 +1,2 @@
-# turnip1234.github.io - my website
+# [My Website](https://geekveggie.dev)
 I put kinda interesting games, experiments, tutorials and 'tools' here.

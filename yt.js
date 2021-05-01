@@ -1,1 +1,0 @@
-document.getElementById("video").src = "https://www.youtube-nocookie.com/embed/" + prompt("Youtube ID");

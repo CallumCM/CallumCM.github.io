@@ -107,7 +107,7 @@ canvas {
     margin-bottom: 10rem;
 }
 body {
-    background-color: #333;
+    background-color: #e8571e/*#333*/;
 }
 body.index {
     background-image: linear-gradient(to top, #040404, #333);

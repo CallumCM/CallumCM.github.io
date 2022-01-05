@@ -1,19 +1,36 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Digital Logic Sim</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="stylesheet" href="../../index_files/css.css">
-    <link rel="stylesheet" href="../../index_files/style.css">
+<html>
+	<head>
+    <title>Digital Logic Simulator - GeekVeggie</title> <!-- Page Title -->
+    <link rel="icon" href="/favicon.png"> <!-- Favicon -->
+    <meta name="description" content="A very cool website"> <!-- Page Description -->
+    <meta name="robots" content="index, follow"> <!-- Index Preferences -->
+    <link rel="canonical" href="https://geekveggie.dev/oldprojects/experiments/digitallogicsim/"> <!-- Canonical Domain -->
+    <meta charset="UTF-8"> <!-- Unicode Type -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Screen Width -->
+    <link rel="stylesheet" type="text/css" href="/jonahstrap.css" media="screen"> <!-- Use jonahstrap.css file (replace this line if you use method #2-->
+
+    <!-- Social Media Embeds -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geekveggie.dev/oldprojects/experiments/digitallogicsim/"> <!-- Canonical Domain -->
+    <meta property="og:title" content="Digital Logic Simulator - GeekVeggie"> <!-- Page Title -->
+    <meta property="og:description" content="A very cool website"> <!-- Page Description -->
+    <meta property="og:image" content="https://geekveggie.dev/favicon.png"> <!-- Social Media Embed (ideally 16x9 ratio, and must be link) -->
+
+    <!-- Special Twitter Embeds -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://geekveggie.dev/oldprojects/experiments/digitallogicsim/"> <!-- Canonical Domain -->
+    <meta property="twitter:title" content="Digital Logic Simulator - GeekVeggie"> <!-- Page Title -->
+    <meta property="twitter:description" content="A very cool website"> <!-- Page Description -->
+    <meta property="twitter:image" content="https://geekveggie.dev/favicon.png"> <!-- Social Media Embed (ideally 16x9 ratio, and must be link) -->
   </head>
   <body>
-    <a href="https://turnip1234.github.io/index.html">Home</a>
-    <h3 class="title">Complete Credit to Sebastian Lague for the orginial simulation, and AOx0 for merging the pull requests.</h3>
-    <h5 class="title">Feat: Set Group Size by sagitarious12, 4, 8, and 16 bit bus wires by t4ccer, menu to rename and elete custom chips by gml16, and improvments to the edit menu by Tigralt, with miscellaneous changes by me (Turnip1234).</h5>
-    <div id="unity-container" class="unity-desktop">
+		<hr class="space">
+	  <h1 class="title center">Digital Logic Simulator</h1>
+		<hr class="space">
+		
+    <p class="center">Complete Credit to Sebastian Lague for the orginial simulation, and AOx0 for merging the pull requests.<br><br></brFeat:>Feat: Set Group Size by sagitarious12, 4, 8, and 16 bit bus wires by t4ccer, menu to rename and elete custom chips by gml16, and improvments to the edit menu by Tigralt, with miscellaneous changes by me (Turnip1234).</p>
+		
+    <div id="unity-container" class="unity-desktop gamebox">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -30,6 +47,7 @@
         <div id="unity-build-title">Digital Logic Sim</div>
       </div>
     </div>
+
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/WebGL.loader.js";
@@ -88,5 +106,16 @@
       };
       document.body.appendChild(script);
     </script>
-  </body>
+		<hr class="space">
+		<hr class="space">
+		<hr class="smallline">
+	</body>
+	<footer>
+  	<p>
+   		<a href="https://geekveggie.dev"><img src="/favicon.png" width="50px" height="50px"></a><br><br>
+   		<a href="https://geekveggie.dev/">geekveggie.dev</a><br>
+			Almost the Entire Website by <a href="https://jonahkc.com">Jonah</a>.<br>
+			Icons by <a href="https://icons8.com">Icons8</a>.<br>
+		</p>
+	</footer>
 </html>

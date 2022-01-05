@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>GeekVeggie | Home</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8">
+        <link href="index_files/css.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet">
+        <link href="index_files/style.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="So many games, tutorials, and fun activities to keep you busy on a rainy day.">
+        <meta name="keywords" content="games, fun activities, geekveggie, geek, veggie, geek veggie">
+        <meta name="msvalidate.01" content="2E0C06B3548691DB5A40A0E6D7DA68BB" />
+        <link rel="canonical" href="https://turnip1234.github.io/index.html" />
+        <meta property="og:image" content="https://geekveggie.dev/favicon.png"/>
+    </head>
+    <body class="index">
+        <noscript>Your browser doesn't support JavaScript or it isn't enabled, all of the programs here use JavaScript to run.</noscript>
+        <h1 class="title">Welcome to GeekVeggie!</h1>
+        <br />
+        <nav class="dropdown-menu">
+          <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
+                <a href="./UnityGames/HistoryIdentityProject/index.html">History Identity Project</a>
+                <a href="./UnityGames/Digital Logic Sim/index.html">Digital Logic Sim</a>
+                <a href="./UnityGames/Blob/blob.htm">Blob</a>
+                <a href="./UnityGames/turnipClicker/tclick.htm">Turnip Clicker</a>
+                <a href="./UnityGames/oodgel/oodgel.htm">Oodgel</a>
+                <a href="./UnityGames/treeclick/tree.htm" id="warning">Christmastree Clicker</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Tutorials</button>
+            <div class="dropdown-content">
+                <a href="./tips.html">How to Approach Learning Fancy Software</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Experiments</button>
+            <div class="dropdown-content">
+                <a  href="./joke.html">Lame Joke Gen.</a>
+                <a href="./UnityGames/s/s.htm">Thing</a>
+                <a  href="./UnityGames/plates/plates.htm">Procedural Landmass Generation</a></li>
+            </div>
+          </div>
+        </nav>
+
+        <div id = "fullscreen">
+        <h3 class="title">Drawing Challenge: Draw a <strong class="underline">Bob Ross painting</strong></h3>
+        <div id="drawholder"></div>
+        <h2 id="hue" class="title">Brush Hue: <input class="title" name="brush color" id='bcolor' type="color"/></h2>
+        <div class="buttonContainer">
+            <button onclick="erasorPen();" id='erasor'>Eraser</button>
+            <button onclick="penErasor();" id='pen'>Pen</button>
+            <button onclick="fullscreen();" id='fs'>Toggle Full Screen</button>
+        </div>
+        <br />
+        <div class=title>
+            <h2>Brush thickness:</h2>
+            <input type="range" id='slider' min="2" max="50" class="slider">
+        </div>
+        <br /><br />
+        <div class="buttonContainer">
+            <button id="warning" class="title" onclick="cleardraw()">C L E A R</button>
+            <br /><br />
+            <button class="btn" id="btn-download" style="width:100%"><i class="fa fa-download"></i> Download Image</button>
+        </div>
+        </div>
+        <br><br><br><br>
+        <script src="./index_files/p5.js"></script>
+        <h3 class="title">Word of the month:</h3>
+        <h1 class="title wordoftheday"><strong class="underline">Xeric</strong> - characterized by, relating to, or requiring only a small amount of moisture</h1>
+        <p class="title warning">Credit to cheese for the <i>amazing</i> background color.</p>
+        <script src="./dailydraw.js"></script>
+        <script src="./fullscreen.js"></script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+	<head>
+    <title>Turnip Clicker - GeekVeggie</title> <!-- Page Title -->
+    <link rel="icon" href="/favicon.png"> <!-- Favicon -->
+    <meta name="description" content="A very cool website"> <!-- Page Description -->
+    <meta name="robots" content="index, follow"> <!-- Index Preferences -->
+    <link rel="canonical" href="https://geekveggie.dev/oldprojects"> <!-- Canonical Domain -->
+    <meta charset="UTF-8"> <!-- Unicode Type -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Screen Width -->
+    <link rel="stylesheet" type="text/css" href="/jonahstrap.css" media="screen"> <!-- Use jonahstrap.css file (replace this line if you use method #2-->
+
+    <!-- Social Media Embeds -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geekveggie.dev/oldprojects"> <!-- Canonical Domain -->
+    <meta property="og:title" content="Turnip Clicker - GeekVeggie"> <!-- Page Title -->
+    <meta property="og:description" content="A very cool website"> <!-- Page Description -->
+    <meta property="og:image" content="https://geekveggie.dev/favicon.png"> <!-- Social Media Embed (ideally 16x9 ratio, and must be link) -->
+
+    <!-- Special Twitter Embeds -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://geekveggie.dev/oldprojects"> <!-- Canonical Domain -->
+    <meta property="twitter:title" content="Turnip Clicker - GeekVeggie"> <!-- Page Title -->
+    <meta property="twitter:description" content="A very cool website"> <!-- Page Description -->
+    <meta property="twitter:image" content="https://geekveggie.dev/favicon.png"> <!-- Social Media Embed (ideally 16x9 ratio, and must be link) -->
+
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/turnipClicker.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+	
+	<body>
+		<hr class="space">
+	  <h1 class="title center">Turnip Clicker</h1>
+    <p class="center">If you want the leaderboard to work, follow <a target="_blank" href="https://support.mozilla.org/en-US/kb/mixed-content-blocking-firefox#w_unblock-mixed-content">THIS</a> tutorial (for firefox).<br>(Web Developer Jonah note: you really don't need the leaderboard no one has played this in 15 years)</br></p>
+		
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 850px; height: 600px">
+      </div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div>Turnip Clicker</div>
+      </div>
+    </div>
+		
+		<hr class="space">
+		<hr class="space">
+		<hr class="smallline">
+	</body>
+	<footer>
+  	<p>
+   		<a href="https://geekveggie.dev"><img src="/favicon.png" width="50px" height="50px"></a><br><br>
+   		<a href="https://geekveggie.dev/">geekveggie.dev</a><br>
+			Almost the Entire Website by <a href="https://jonahkc.com">Jonah</a>.<br>
+			Icons by <a href="https://icons8.com">Icons8</a>.<br>
+		</p>
+	</footer>
+</html>

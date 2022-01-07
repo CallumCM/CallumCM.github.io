@@ -688,7 +688,7 @@ input[type=radio]:checked {
   }
 }
 
-# CUSTOM (very fancy)
+/* CUSTOM (very fancy) */
 
 .red {
 	color: #ff0000 !important;

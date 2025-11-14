@@ -1,50 +1,17 @@
-@keyframes blackbody-temperature {
-    0% {
-        background-color: rgb(0, 0, 0);
-    }
-    10% {
-        background-color: rgb(255, 56, 0);
-    }
-    20% {
-        background-color: rgb(255, 180, 107);
-    }
-    30% {
-        background-color: rgb(255, 217, 163);
-    }
-    40% {
-        background-color: rgb(255, 235, 206);
-    }
-    50% {
-        background-color: rgb(255, 241, 224);
-    }
-    60% {
-        background-color: rgb(255, 244, 232);
-    }
-    70% {
-        background-color: rgb(255, 247, 239);
-    }
-    80% {
-        background-color: rgb(255, 249, 243);
-    }
-    90% {
-        background-color: rgb(255, 251, 248);
-    }
-    100% {
-        background-color: rgb(255, 255, 255);
-    }
-}
-
-html {
-    animation: blackbody-temperature 10s ease-in-out;
-}
-
 html {
   height: 100%;
   width: 100%;
-  background-color: #000;
-  /*#ffc37a;*/
+  background-color: rgb(255, 180, 123);
+  /* 4250K blackbody temperature */
   font-family: 'Times New Roman', Times, serif;
-  filter: saturate(70%);
+}
+
+.p5Canvas {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 h1 {
@@ -59,7 +26,7 @@ h2 {
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 2;
 }
 
@@ -84,11 +51,65 @@ a:hover {
   transform: translate(0, -3px);
 }
 
+.tooltip {
+  position: relative;
+  text-decoration: dotted underline;
+}
+
+.tooltip {
+  --tooltip-offset: 0px;
+}
+
+.tooltip::after {
+  content: attr(data-text);
+
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(calc(-50% + var(--tooltip-offset)));
+
+  width: max-content;
+  max-width: min(33vw, calc(100vw - 16px));
+  padding: 4px 12px;
+  border-radius: 4px;
+  /* 3000K blackbody temperature */
+  background: rgb(255, 162, 92);
+  /* 5500K blackbody temperature */
+  color: rgb(255, 218, 201);
+
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s linear, visibility 0s linear 0.1s;
+}
+
+.tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.1s linear;
+}
+
 .container {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.info-bubble {
+  background-color: rgb(197, 204, 255);
+  {"r":255,"g":113,"b":33}
+  fill: white;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bio {
@@ -126,19 +147,13 @@ a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 0 20px;
+  margin: 40px 40px;
 }
 
 .links a {
   margin: 0 3px;
   font-size: 18px;
   line-height: 2;
-}
-
-.skills {
-  text-align: center;
-  margin: 0 20px 20px 20px;
-  max-width: 800px;
 }
 
 .linkicon {
@@ -166,9 +181,9 @@ a:hover {
 
 /* Highlighting */
 ::selection {
-  background: rgba(255, 140, 0, .5);
+  background: rgba(255, 128, 48, .5);
 }
 
 ::-moz-selection {
-  background: rgba(255, 140, 0, .5);
+  background: rgba(255, 128, 48, .5);
 }

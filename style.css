@@ -1,8 +1,7 @@
 html {
   height: 100%;
   width: 100%;
-  background-color: rgb(255, 180, 123);
-  /* 4250K blackbody temperature */
+  --temp-background-color: 4250K;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -73,10 +72,8 @@ a:hover {
   max-width: min(33vw, calc(100vw - 16px));
   padding: 4px 12px;
   border-radius: 4px;
-  /* 3000K blackbody temperature */
-  background: rgb(255, 162, 92);
-  /* 5500K blackbody temperature */
-  color: rgb(255, 218, 201);
+  --temp-background-color: 3000K;
+  --temp-color: 5500K;
 
   text-align: center;
   visibility: hidden;
@@ -98,10 +95,7 @@ a:hover {
 }
 
 .info-bubble {
-  --temperature: 8000K;
-
-  /* 8000K Blackbody Temp */
-  background-color: var(--temperature);
+  --temp-background-color: 8000K;
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   position: fixed;

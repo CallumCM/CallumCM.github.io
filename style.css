@@ -98,9 +98,10 @@ a:hover {
 }
 
 .info-bubble {
-  background-color: rgb(197, 204, 255);
-  {"r":255,"g":113,"b":33}
-  fill: white;
+  --temperature: 8000K;
+
+  /* 8000K Blackbody Temp */
+  background-color: var(--temperature);
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   position: fixed;
@@ -110,6 +111,17 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.1s ease-in-out
+}
+
+.info-bubble:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.1s ease-in-out
+}
+
+.info-bubble>img {
+  pointer-events: none;
 }
 
 .bio {

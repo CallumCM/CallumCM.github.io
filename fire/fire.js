@@ -31,7 +31,7 @@ function getAnimationProgress() {
   return Math.min(elapsed / animationDuration, 1);
 }
 
-async function setup() {  
+async function setup() {
   canvas = createCanvas(width, height);
 
   // this is cause certain devices (cough cough, Retina) have a super high resolution
@@ -60,12 +60,33 @@ async function setup() {
     if (i >= particlesToSpawn) {
       clearInterval(spawnParticlesInterval);
     }
-  }, 2000/particlesToSpawn);
+  }, 2000 / particlesToSpawn);
 
   const container = document.querySelector('.container');
   if (container) {
     container.style.display = 'flex';
   }
+
+
+  // This lets us use blackbody temperatures in CSS
+  // --temperature properties all get replaced with their corresponding rgb colors
+  const allStyles = getComputedStyle(document.documentElement);
+  const temperatureProperties = Array.from(allStyles).filter(prop => prop.startsWith('--temperature'));
+
+  temperatureProperties.forEach(prop => {
+    const temperatureValue = allStyles.getPropertyValue(prop).trim();
+
+    if (temperatureValue.endsWith('K')) {
+      temperatureValue = temperatureValue.slice(0, -1);
+    }
+
+    const temperature = parseInt(temperatureValue, 10);
+
+    if (!isNaN(temperature)) {
+      const color = BlackBody.temperatureToRgb(temperature);
+      document.documentElement.style.setProperty(prop, color);
+    }
+  });
 }
 
 function draw() {

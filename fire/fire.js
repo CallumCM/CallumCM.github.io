@@ -3,7 +3,7 @@ let height = window.innerHeight;
 let particleLine = 0; // Percent of the screen the line of flame has burnt through
 let particles = [];
 const animationDuration = 4000;
-const animationDelay = 1500;
+const animationDelay = 500;
 const animationStart = Date.now();
 const gradientHeight = 10;
 

@@ -4,7 +4,7 @@ let particleLine = 0; // Percent of the screen the line of flame has burnt throu
 let particles = [];
 const animationDuration = 4000;
 const animationDelay = 500;
-const animationStart = Date.now();
+let animationStart = 0;
 const gradientHeight = 10;
 
 function randInt(min, max) {
@@ -26,7 +26,7 @@ function spawnParticle() {
  * @returns {number} Returns the progress of the fire animation from 0-1
  */
 function getAnimationProgress() {
-  const elapsed = Date.now() - animationStart - animationDelay;
+  const elapsed = millis() - animationStart - animationDelay;
   if (elapsed < 0) return 0;
   return Math.min(elapsed / animationDuration, 1);
 }
@@ -49,6 +49,8 @@ async function setup() {
       document.addEventListener('blackbodyLoaded', resolve, { once: true });
     });
   }
+
+  animationStart = millis();
 
   let i = 0;
   const particlesToSpawn = Math.floor(0.3 * width);

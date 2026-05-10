@@ -1,7 +1,7 @@
 html {
   height: 100%;
   width: 100%;
-  --temp-background-color: 4250K;
+  --temp-background-color: 3700K;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -95,12 +95,12 @@ a:hover {
 }
 
 .info-bubble {
-  --temp-background-color: 8000K;
+  --temp-background-color: 6000K;
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   padding: 4px;
   display: flex;
   align-items: center;
@@ -112,6 +112,22 @@ a:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: transform 0.1s ease-in-out
+}
+
+.info-bubble:hover>.info-bubble-popup {
+  display: block;
+}
+
+.info-bubble-popup {
+  display: none;
+  position: fixed;
+  width: 60vw;
+  padding: 8px;
+  top: 8px;
+  right: 50px;
+  border-radius: 8px;
+  --temp-background-color: 6000K;
+  z-index: 10;
 }
 
 .info-bubble>img {
@@ -187,9 +203,9 @@ a:hover {
 
 /* Highlighting */
 ::selection {
-  background: rgba(255, 128, 48, .5);
+  --temp-background: 3200K;
 }
 
 ::-moz-selection {
-  background: rgba(255, 128, 48, .5);
+  --temp-background: 3200K;
 }

@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
-
-  
+const DOMAndBlackbodyLoaded = () => {
   function parseTemperature(tempString) {
     if (!tempString) return null;
 
@@ -146,5 +144,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     attributes: true,
     attributeFilter: ['style']
   });
+};
 
+let domContentLoaded = false;
+let blackbodyLoaded = false;
+
+document.addEventListener('blackbodyLoaded', () => {
+  blackbodyLoaded = true;
+  if (domContentLoaded) {
+    DOMAndBlackbodyLoaded();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  domContentLoaded = true;
+  if (blackbodyLoaded) {
+    DOMAndBlackbodyLoaded();
+  }
 });

@@ -36,9 +36,18 @@
 
 <body>
   <div class="container">
-    <div class="info-bubble">
+    <div style="display: none;" class="info-bubble">
       <img src="/media/icons/fire.svg" width="32" height="32"
         alt="Little fire icon to open a popup explaining why my website has a burn-in animation. Presumably if you're reading this, you didn't see the burn-in animation BUT I promise you it was super cool-looking." />
+      <div class="info-bubble-popup">
+        <p>Why the fire animation you ask?<br>In my chemistry class we recently were learning about entropy and I think
+          a beautiful example of entropy is blackbody radiation. Blackbody radiation is the electromagnetic radiation
+          that every atom always emits based on its temperature--it's the reason thermal cameras work and the reason
+          molten metal glows white hot. It turns out you can calculate the blackbody spectrum using the Planck formula,
+          so I got to work doing that. My website has no colors defined in it. I've defined every color as a
+          temperature, and what you are seeing is the calculation of what the color of an object in real life would be
+          at that temperature. Here's a little slider so you can play around with it yourself:</p>
+      </div>
     </div>
 
     <h1>Hi, I'm Callum!</h1>
@@ -48,7 +57,7 @@
       <p>
         I'm a student at the University of Washington intending to major in neuroscience. I have the most experience
         programming in <span class="tooltip"
-          data-text="I've done a lot of work with machine learning algorithms in Python including NumPy and PyTorch, but I've had the most experience designing websites and APIs with Flask and FastAPI. I also have two years of work experience developing with/modifying Chainlit.">Python</span>
+          data-text="Pandas/multiprocessing and multithreading/Flask/FastAPI mainly">Python</span>
         and <span class="tooltip"
           data-text="Most of what I've done with JavaScript is writing frontend code for websites, but I have some experience with Node.js as well.">JavaScript.</span>
 
@@ -60,8 +69,8 @@
           data-text="Gymnasium is Switzerland's version of college-preparatory high school.">Gymnasium</span> entrance
         exams.<br><br>
 
-        Outside coding, I enjoy, learning German and French, baking/cooking, and playing music on the <span
-          class="tooltip"
+        Outside coding, I enjoy making lattes, learning German and French, baking/cooking, and playing music on the
+        <span class="tooltip"
           data-text="A double-reeded woodwind instrument resembling a very large clarinet.">bassoon</span>.<br><br>
 
         If you want to get in touch with me feel free to reach out to <a href="mailto:contact@geekveggie.dev">

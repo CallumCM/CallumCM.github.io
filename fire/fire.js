@@ -2,8 +2,11 @@ let width = window.innerWidth;
 let height = window.innerHeight;
 let particleLine = 0; // Percent of the screen the line of flame has burnt through
 let particles = [];
-const animationDuration = 4000;
-const animationDelay = 500;
+
+const isMobile = width <= 768;
+
+const animationDuration = isMobile ? 2000 : 4000;
+const animationDelay = isMobile ? 50 : 500;
 let animationStart = 0;
 const gradientHeight = 10;
 
@@ -53,7 +56,9 @@ async function setup() {
   animationStart = millis();
 
   let i = 0;
-  const particlesToSpawn = Math.floor(0.3 * width);
+  const particlesToSpawn = isMobile ? 100 : Math.floor(0.3 * width);
+
+  const particleSpawnTime = isMobile ? 300 / particlesToSpawn : 2000 / particlesToSpawn;
 
   const spawnParticlesInterval = setInterval(() => {
     spawnParticle();
@@ -62,7 +67,7 @@ async function setup() {
     if (i >= particlesToSpawn) {
       clearInterval(spawnParticlesInterval);
     }
-  }, 2000 / particlesToSpawn);
+  }, particleSpawnTime);
 
   const container = document.querySelector('.container');
   if (container) {

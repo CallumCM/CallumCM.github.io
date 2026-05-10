@@ -109,6 +109,7 @@ function draw() {
 
   // Stop P5 when all particles are gone
   if (particleLine >= 1 && particles.length === 0) {
+    clear(); // Just in case you tab out and the particles don't get properly removed.
     noLoop();
   }
 }

@@ -1,20 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
 html {
   height: 100%;
   width: 100%;
-  background-color: #ffc37a;
-  font-family: 'Bellota Text', sans-serif;
+  --temp-background-color: 3700K;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.p5Canvas {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 h1 {
   font-size: 50px;
   text-align: center;
   margin: 10px;
+  font-weight: unset;
+}
+
+h2 {
+  font-weight: unset;
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 2;
 }
 
@@ -39,11 +50,92 @@ a:hover {
   transform: translate(0, -3px);
 }
 
+.tooltip {
+  position: relative;
+  text-decoration: dotted underline;
+}
+
+.tooltip {
+  --tooltip-offset: 0px;
+}
+
+.tooltip::after {
+  content: attr(data-text);
+
+  position: absolute;
+  z-index: 10;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(calc(-50% + var(--tooltip-offset)));
+
+  width: max-content;
+  max-width: min(33vw, calc(100vw - 16px));
+  padding: 8px 14px;
+  border-radius: 6px;
+  --temp-background-color: 3000K;
+  --temp-color: 5500K;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.9rem;
+  line-height: 1.4;
+
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s linear, visibility 0s linear 0.1s;
+}
+
+.tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.1s linear;
+}
+
 .container {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.info-bubble {
+  --temp-background-color: 6000K;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease-in-out
+}
+
+.info-bubble:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.1s ease-in-out
+}
+
+.info-bubble:hover>.info-bubble-popup {
+  display: block;
+}
+
+.info-bubble-popup {
+  display: none;
+  position: fixed;
+  width: 60vw;
+  padding: 8px;
+  top: 8px;
+  right: 50px;
+  border-radius: 8px;
+  --temp-background-color: 6000K;
+  z-index: 10;
+}
+
+.info-bubble>img {
+  pointer-events: none;
 }
 
 .bio {
@@ -54,7 +146,7 @@ a:hover {
 }
 
 .display-image {
-  height: 40vmin;
+  height: 50vmin;
 }
 
 @media only screen and (max-width: 900px) {
@@ -81,19 +173,13 @@ a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 0 20px;
+  margin: 40px 40px;
 }
 
 .links a {
   margin: 0 3px;
   font-size: 18px;
   line-height: 2;
-}
-
-.skills {
-  text-align: center;
-  margin: 0 20px 20px 20px;
-  max-width: 800px;
 }
 
 .linkicon {
@@ -121,9 +207,9 @@ a:hover {
 
 /* Highlighting */
 ::selection {
-  background: rgba(255, 140, 0, .5);
+  --temp-background: 3200K;
 }
 
 ::-moz-selection {
-  background: rgba(255, 140, 0, .5);
+  --temp-background: 3200K;
 }

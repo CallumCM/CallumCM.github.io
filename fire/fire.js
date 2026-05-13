@@ -3,10 +3,12 @@ let height = window.innerHeight;
 let particleLine = 0; // Percent of the screen the line of flame has burnt through
 let particles = [];
 
-const isMobile = width <= 768;
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+const useFastAnimation = isSafari || isiOS; // Safari and iOS devices throttle the animation if the user doesn't interact, so we need it to run faster.
 
-const animationDuration = isMobile ? 2000 : 4000;
-const animationDelay = isMobile ? 50 : 500;
+const animationDuration = useFastAnimation ? 1000 : 3000;
+const animationDelay = useFastAnimation ? 0 : 500;
 let animationStart = 0;
 const gradientHeight = 10;
 
@@ -56,9 +58,9 @@ async function setup() {
   animationStart = millis();
 
   let i = 0;
-  const particlesToSpawn = isMobile ? 100 : Math.floor(0.3 * width);
+  const particlesToSpawn = useFastAnimation ? 100 : Math.floor(0.3 * width);
 
-  const particleSpawnTime = isMobile ? 300 / particlesToSpawn : 2000 / particlesToSpawn;
+  const particleSpawnTime = useFastAnimation ? 300 / particlesToSpawn : 2000 / particlesToSpawn;
 
   const spawnParticlesInterval = setInterval(() => {
     spawnParticle();
